@@ -1,0 +1,67 @@
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+<body>
+
+  <header class="myheader">
+    <h1>Orchestrator</h1>
+  <%- include("../partials/nav") %>
+  </header>
+
+  <div class="details content">
+    <div class="row" >
+      <div class="col-sm-6" >
+        <div class="card" style="width: 18rem; margin:10px 60px; display: inline-block;">
+          <div class="card-body">
+            <h2><%= robot.name %></h2>
+
+            <h5>Robot ID:</h5>
+            <p> <%= robot.id %> </p>
+
+            <h5>Robot User:</h5>
+            <p> <%= user.name %> </p>
+
+            <h5>Robot type:</h5>
+            <% if(robot.attended){ %>
+              <p>Attended Robot</p>
+            <%}else{ %>
+              <p>Not-Attended Robot</p>
+            <% } %>
+
+            <% if(robot.standard){ %>
+              <p>Standard Robot</p>
+            <%}else{ %>
+              <p>Not-Standard Robot</p>
+            <% } %>
+            
+            <br/><br/>
+            <a class="update" href="/robots/update/<%= robot.id%>">Update Robot</a>
+            <br/>
+            <a class="delete" href="#"  data-doc="<%= robot._id%>">Delete Robot</a>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="/robots" >Return</a>
+
+      </div>
+    </div>
+      
+  </div>
+
+   <script>
+    const element = document.querySelector('a.delete');
+    element.addEventListener('click', (e) => {
+      const endpoint = `/robots/${element.dataset.doc}`;
+      fetch(endpoint, {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err));
+    }); 
+  </script> 
+    <%- include("../partials/script.ejs") %>
+
+  <%- include("../partials/footer.ejs") %>
+
+</body>
+</html>

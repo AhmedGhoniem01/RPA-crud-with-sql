@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+  }
+   html {scrollbar-color: #9e4673 #3d4a59;}
+  header {
+    margin-bottom: 100px;
+    background-color: #3d4a59;
+    color: white;
+    border-radius: 0 0 70px 70px;
+  }
+
+  header h1 {
+    margin-bottom: 23px;
+  }
+  
+  .parent {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+  }
+  
+  .parent li a {
+    color: #fff;
+    text-decoration: none;
+  
+    margin-top: 6px;
+    display: inline-block;
+  }
+  
+   .parent li a:hover {
+    border-bottom: 2px solid whitesmoke;
+    font-size: 20px;
+  } 
+  .mode {
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  form{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    font-style:bold;
+    width: fit-content;
+   }
+  input,label{
+    border-radius: 6px;
+    /* display: block; */
+    width: 300px;
+    height:35px;
+  }
+  label{
+    font-weight: 750;
+  }
+  input{
+    border: 1px solid gray;
+    font-size: 25px;
+    margin-bottom: 20px ;
+  }
+  button{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    background-color: #3d4a59;
+    color: whitesmoke;
+    padding: 10px 20px ;
+    border-radius: 17px;
+  }
+  article:hover{
+    border: 1px solid  #3d4a59 ;
+    color: rgb(68,73,92);
+    border-left: 8px solid #3d4a59;
+  }
+  article:hover h2{
+    font-weight: 750;
+  }
+  .body article:hover{
+    border: 1px solid  whitesmoke ;
+    color:whitesmoke;
+    border-left: 8px solid whitesmoke;
+  }
+  h2{
+    text-align: center;
+    padding: 3px 0; 
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    color:  #3d4a59;
+    border-radius: 17px;
+  
+  }
+  .hProcess{
+    text-align: center;
+    padding: 10px 0; 
+    width: 20%;
+    margin-left: 540px;
+    margin-right: 20px;
+    background-color: #3d4a59;
+    color: #fff;
+    border-radius: 17px;
+  }
+  li {
+    list-style-type: none;
+    font-size: 18px;
+  }
+  h1 {
+    text-align: center;
+    padding: 10px 0;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #3d4a59;
+    color: #fff;
+    border-radius: 17px;
+    padding: 15px;
+  }
+  
+  section {
+    margin-bottom: 100px;
+    box-shadow: 5px 5px 25px rgb(179, 172, 172);
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 13px;
+    padding: 45px 0;
+  }
+  .para {
+    font-size: 20px;
+  }
+  .flex {
+    display: flex;
+  
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer {
+    text-align: center;
+  }
+  .design {
+    background-color: #3d4a59;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    margin-bottom: 0;
+  }
+  .body{
+    background-color: rgb(21, 23, 39);
+    color: whitesmoke;
+  }
+  .body h2{
+      color: white;
+  }
+  .body article p{
+    color: white;
+  }  
+  article{
+    text-align:center;
+    border: 0.5px solid rgb(189, 189, 209);
+    border-radius: 5px;
+    margin: 40px 20px;
+    width:320px;
+    margin: 40px 20px;
+    color: rgb(87, 84, 84);
+    transition: 0.2s;
+  }
+  article p{
+    margin-top: 19px;
+    font-size:24px ;
+    font-weight: normal;
+  }
+  article a{
+    font-size: 25px;
+  }
+  .box{
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+  }
+  .process{
+    display:flex;
+    justify-content: center;
+    width: 80%;
+  }
+  .btnProcess{
+    margin-right: 340px;
+    }
+  .nameProcess{
+    margin-right: 460px;
+    }

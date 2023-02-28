@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<%- include("../partials/head") %>
+
+  <body id="body"  >
+
+    <header class="myheader">
+      <h1>RPA Development</h1>
+      <%- include("../partials/nav") %>
+    </header>
+
+    <main id="main"> 
+        <section>
+            <h1>
+                Create New User
+            </h1>
+            <br>
+            <form method="POST" action="/users">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text"  > 
+                <br>
+                <label for="pass">Password</label>
+                <input id="pass" name="password" type="password"  > 
+                <br>
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email"  > 
+                <br>
+
+                <br>
+                <button>Add</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include("../partials/footer") %>
+    
+  </body>
+</html>

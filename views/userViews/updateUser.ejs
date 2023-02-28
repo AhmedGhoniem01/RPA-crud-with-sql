@@ -1,0 +1,53 @@
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+<body>
+
+  <header class="myheader">
+    <h1>Orchestrator</h1>
+  <%- include("../partials/nav") %>
+  </header>
+
+<!-- 
+  <div class="create">
+    <form action="/users/update/<%= user.id %>" method="POST">
+      <div class="create">
+      <label for="name">User name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="name">User email:</label>
+      <input type="text" id="email" name="email" required>
+      <label for="password">User password:</label>
+      <input type="password" id="password" name="password" required>
+      <button>Update</button>
+      </div>
+    </form>
+  </div> -->
+
+  <main id="main"> 
+    <section>
+        <h1>
+            Update Exsiting User
+        </h1>
+        <br>
+        <form method="POST" action="/users/update/<%= user.id %>">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="<%- user.name %>"> 
+            <br>
+            <label for="pass">Password</label>
+            <input id="pass" name="password" type="password" placeholder="<%- user.password %>" > 
+            <br>
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="<%- user.email %>"> 
+            <br>
+            <br>
+            <button>Update</button>
+        </form>
+
+    </section>
+</main>
+
+  <%- include("../partials/script.ejs") %>
+
+  <%- include("../partials/footer.ejs") %>
+</body>
+</html>

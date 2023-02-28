@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head") %>
+
+  <body id="body"  >
+
+    <header class="myheader">
+      <h1>RPA Development</h1>
+      <%- include("../partials/nav") %>
+    </header>
+
+    <main id="main"> 
+        <section>
+            <h1>
+              Update Exsiting Robot 
+            </h1>
+            <br>
+            <form action="/robots/update/<%= robot.id %>" method="POST" >
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text"  placeholder="<%= robot.name %>" required> 
+                <br>
+
+              <% if(robot.standard){ %>
+                <label for="str">Standard Robot</label>
+                <input id="str" name="standard" type="checkbox" checked>
+              <% }else{ %>
+                <label for="str">Standard Robot</label>
+                <input id="str" name="standard" type="checkbox">               
+              <% } %>
+                <br>
+
+              <% if(robot.attended){ %>
+                <label for="str">Attended Robot</label>
+                <input id="str" name="attended" type="checkbox" checked>
+              <% }else{ %>
+                <label for="str">Attended Robot</label>
+                <input id="str" name="attended" type="checkbox">               
+              <% } %>
+                <br>
+
+                <label for="user">Select User</label>
+                <input id="user" name="user" list="users"placeholder=<%= robot.user %>>
+                <datalist id="users">
+                  <% users.forEach(user => { %>
+                  <option value="<%= user.name %>">
+                    <% }) %>
+                </datalist>
+                <br>
+
+                <button>Add</button>
+            </form>
+        </section>
+    </main>
+
+    <%- include("../partials/footer") %>
+
+    
+  </body>
+</html>

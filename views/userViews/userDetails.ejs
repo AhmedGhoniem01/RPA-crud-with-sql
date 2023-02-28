@@ -1,0 +1,51 @@
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+<body>
+
+  <header class="myheader">
+    <h1>Orchestrator</h1>
+  <%- include("../partials/nav") %>
+  </header>
+  
+  <div class="details content">
+    <div class="row" >
+      <div class="col-sm-6" >
+        <div class="card" style="width: 18rem; margin:10px 60px; display: inline-block;">
+          <div class="card-body">
+              <h1 class="card-title" style="width: 80%;"><%= user.name %></h1>
+              <h5>User ID:</h5>
+              <p><%= user.id %></p>
+              <h5>User Email:</h5>
+              <p><%= user.email %></p>
+              <h5>User Password:</h5>
+              <p><%= user.password %></p>
+              <br/><br/>
+              <a class="update" href="/users/update/<%= user.id%>">Update User</a>
+              <br/>
+              <a class="delete" href="#" data-doc="<%= user._id %>">Delete User</a>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="/users" >Return</a>
+      </div>
+    </div>
+  </div>
+
+  <%- include("../partials/footer.ejs") %>
+
+  <script>
+    const trashcan = document.querySelector('a.delete');
+    trashcan.addEventListener('click', (e) => {
+      const endpoint = `/users/${trashcan.dataset.doc}`;
+      fetch(endpoint, {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err));
+    });
+  </script>
+    <%- include("../partials/script.ejs") %>
+
+</body>
+</html
